@@ -14,8 +14,9 @@ public class WallpaperCalcService {
 
     public long calculate(double firstWall, double secondWall, double realHeightWall, double widthWallpaper, double lengthRoll) {
 
+        double standardAddition = 0.10;
         double perimeter = firstWall * 2 + secondWall * 2;
-        double heightWall = realHeightWall + 0.10;
+        double heightWall = realHeightWall + standardAddition;
 
         double quantityPanels = Math.ceil(perimeter / widthWallpaper);
         double stripInRoll = Math.floor(lengthRoll / heightWall);
